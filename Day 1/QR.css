@@ -1,0 +1,102 @@
+/* QR.css */
+
+/* 1. Full‑page gradient background */
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #333;
+  overflow: hidden;
+}
+
+/* 2. Glass‑card container with slide‑in */
+.container {
+  width: 350px;
+  padding: 2rem;
+  background: rgba(255,255,255,0.25);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  animation: slideIn 0.8s ease-out both;
+}
+@keyframes slideIn {
+  from { transform: translateY(50px); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}
+
+/* 3. Headline style */
+.container h1 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* 4. Fancy input field */
+#text-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.6);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+#text-input:focus {
+  background: rgba(255,255,255,0.8);
+  outline: none;
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* 5. Buttons with gradient + hover pop */
+button {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.7rem 1.5rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+button:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* 6. QR code fade‑in */
+#qrcode {
+  margin: 1.5rem auto;
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+  animation: fadeInQR 0.5s ease-out 0.3s forwards;
+}
+@keyframes fadeInQR {
+  to { opacity: 1; }
+}
+
+/* 7. Download button (same style) */
+#download-btn {
+  background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+}
+
+/* 8. Responsive tweak */
+@media (max-width: 400px) {
+  .container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
