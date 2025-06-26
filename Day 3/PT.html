@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Periodic Table 🧪</title>
+  <link rel="stylesheet" href="PT.css">
+</head>
+<body>
+  <h1>Periodic Table of Elements 🧪</h1>
+  <div id="periodic-table"></div>
+
+  <!-- Tooltip -->
+  <div id="tooltip" class="tooltip hidden"></div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-btn">&times;</span>
+      <div id="element-details"></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="PT.js"></script>
+</body>
+</html>
