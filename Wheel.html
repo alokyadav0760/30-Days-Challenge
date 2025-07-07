@@ -1,0 +1,37 @@
+<!-- wheel.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Decide For Me Wheel</title>
+  <link rel="stylesheet" href="wheel.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Category selector -->
+    <div id="selector" class="selector">
+      <h1>Decide For Me 🎡</h1>
+      <label for="category">Choose a category:</label>
+      <select id="category">
+        <option value="" disabled selected>Select one...</option>
+        <option value="cities">City</option>
+        <option value="cars">Car</option>
+        <option value="movies">Movie</option>
+        <option value="foods">Food</option>
+      </select>
+      <button id="startBtn">Start</button>
+    </div>
+
+    <!-- Wheel + Spin -->
+    <div id="wheelContainer" class="wheel-container hidden">
+      <canvas id="wheelCanvas" width="500" height="500"></canvas>
+      <button id="spinBtn">SPIN</button>
+      <div id="result" class="result"></div>
+    </div>
+
+  </div>
+  <script src="wheel.js"></script>
+</body>
+</html>

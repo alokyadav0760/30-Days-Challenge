@@ -1,0 +1,101 @@
+/* wheel.css */
+* {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #FF6EC7, #67E8F9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Selector styles */
+.selector h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.selector label {
+  font-weight: 600;
+  color: #555;
+  display: block;
+  margin-bottom: .5rem;
+}
+.selector select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #67E8F9;
+  border-radius: 0.75rem;
+  background: #F0FCFF;
+  font-size: 1rem;
+  appearance: none;
+}
+.selector button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.75rem;
+  background: #FF6EC7;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.selector button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Wheel container */
+.hidden {
+  display: none;
+}
+.wheel-container {
+  position: relative;
+  margin-top: 1.5rem;
+}
+#wheelCanvas {
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+/* Spin button */
+#spinBtn {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 999px;
+  background: #34D399;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+#spinBtn:active {
+  transform: translate(-50%, -50%) scale(0.95);
+}
+/* Result text */
+.result {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
